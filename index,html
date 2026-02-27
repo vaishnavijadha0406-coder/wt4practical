@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h3 id="text">Hello World</h3>
+<button onclick="changeText()">Change Text (JS)</button>
+<button id="hideBtn">Hide/Show (jQuery)</button>
+
+<script>
+    // JavaScript function
+    function changeText() {
+        document.getElementById("text").innerHTML = "Content Updated!";
+    }
+
+    // jQuery function
+    $(document).ready(function(){
+        $("#hideBtn").click(function(){
+            $("#text").toggle();
+        });
+    });
+</script>
+
+</body>
+</html>
